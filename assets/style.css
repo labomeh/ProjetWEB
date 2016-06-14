@@ -144,7 +144,7 @@ nav ul li:hover
 .f_cherch input
 {
     border:0;
-    width:50vw;
+    width:30vw;
     margin:0;
     height:30px;
     padding:0 0 0 10px;
@@ -389,7 +389,22 @@ legend
 	5%, 30%, 40%, 60%, 70%, 95%		{ bottom: 5px;	}
 }
 
-@media (max-width: 650px)
+.livraison
+{
+	width:14%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:darkred;
+	padding:20px;
+	border-radius:10px;
+}
+.livraison input, .livraison button
+{
+	margin-top:30px;
+	width:100%;
+}
+
+@media (max-width: 790px)
 {
 	#slider
 	{
@@ -407,5 +422,14 @@ legend
 	{
 		margin-top:35%;
 	}
-	
+	header ul li
+	{
+		padding:0;
+	}
+	.f_cherch
+	{
+		position:fixed;
+		top:45px;
+		left:30px;
+	}
 }
