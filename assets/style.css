@@ -210,27 +210,6 @@ article
 	left:5%;
 	width:20%;
 }
-.scale
-{
-	background-image: url('plus.png');
-	position:absolute;
-	margin-top:10px;
-	margin-left:24%;
-	width:10px;
-	height:10px;
-	z-index:1;
-}
-.desc
-{
-	background-image: url('moins.png');
-	position:absolute;
-	top:96%;
-	right:2%;
-	width:10px;
-	height:10px;
-	z-index:1;
-	display:none;
-}
 .products .box img
 {
 	width:100%;
@@ -243,13 +222,22 @@ article
 	padding:10px;
 	width:80%;
 }
-.products .box :not(h1)
+
+/* produits */
+
+.prod .box
 {
-	display:none;
+	position:absolute;
+	left:10%;
+	width:80%;
+	height:800px;
 }
-.products .box img
+.prod .box img
 {
-	display:block;
+	float:left;
+	width:50%;
+	height:30%;
+	border-radius: 4px 4px 0 0;	
 }
 
 /* formulaire */
@@ -313,38 +301,6 @@ legend
 	height:200px;
 }
 
-/* ouverture */
-
-.products .box:target
-{
-	background-color: #EEEEEE;
-	animation: scale 1s;
-	animation-fill-mode: forwards;
-}
-.products .box:target :not(h1)
-{
-	display:block;
-	animation: switchh 1.5s;
-	animation-fill-mode: forwards;
-}
-.products .box:target h1
-{
-	display:none;
-}
-.products .box:target .formulaire h1
-{
-	display:block;
-}
-.products .box:target .formulaire *
-{
-	display:inline-block;
-}
-.products .box:target img
-{
-	float:left;
-	width:50%;
-	height:30%;
-}
  /* slider */
 
 .container
@@ -432,35 +388,6 @@ legend
 	0%, 35%, 65%, 100%	{ bottom: -55px;		}
 	5%, 30%, 40%, 60%, 70%, 95%		{ bottom: 5px;	}
 }
-@keyframes scale {
-	0% { opacity:0;
-		 margin-top:6px;
-		 height:160px;
-		 width:20%;
-	}
-	30% {
-		opacity:0;
-	}
-	50% {margin-top:6px;
-		 height:160px;
-		 width:20%;
-	}
-	100% { opacity:1;
-		 position:fixed;
-		 left:4%;
-		 top:11%;
-		 margin-top:0px;
-		 height:86%;
-		 width:90%;
-		 z-index:9;
-	}
-}
-@keyframes switchh
-{
-	0% {opacity:0;}
-	30% {opacity:0;}
-	100% {opacity:1;}
-}
 
 @media (max-width: 650px)
 {
@@ -476,19 +403,9 @@ legend
 	{
 		width:80%;
 	}
-	.products a
-	{
-		left:80%;
-		margin-left:0;
-		margin-top:50px;
-	}
 	.content
 	{
 		margin-top:35%;
 	}
-	.scale
-	{
-		position:relative;
-
-	}
+	
 }
